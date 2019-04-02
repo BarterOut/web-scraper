@@ -1,5 +1,13 @@
+import sys
 from scrape import BasicScraper
 
-DEMO_URL = 'https://www.barnesandnoble.com/s/calculus+for+dummies'
+URL = 'https://www.barnesandnoble.com/s/'
 
-print('Avg. price: ' + BasicScraper.demo(DEMO_URL))
+def run(query):
+  print('Avg. price for ' + query + ' : $', BasicScraper.demo(URL+query))
+
+if len(sys.argv) == 3:
+  if sys.argv[1] == '-q':
+    run(query=sys.argv[2])
+else:
+  run(query='calculus+for+dummies')

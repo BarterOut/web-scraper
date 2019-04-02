@@ -1,12 +1,13 @@
 from bs4 import BeautifulSoup
 import requests
+import re
 
 class BasicScraper:
   def scrape(url):
     return 'scraping'
 
   def demo(url):
-    """Return the average price of CAET from Barnes and Noble 1 page search"""
+    """Return the average price of a book from Barnes and Noble search"""
     page_response = requests.get(url, timeout=5)
     page_content = BeautifulSoup(page_response.content, "html.parser")
     titles = page_content.find_all('a')
@@ -16,8 +17,9 @@ class BasicScraper:
         children = i.findChildren("span" , recursive=False)
         if (len(children) >= 1):
           price = children[1].text
-          price = price[2:]
-          price = price.strip('\n')
+          price = price[-5:]
+          price = price.replace('\n', '')
+          price = price.replace('$', '')
           prices.append(float(price))
 
     s = 0.0
