@@ -1,9 +1,9 @@
-# web-scraper
+# Textboook Price Web Scraper
 > A Web Scraping API for BarterOut Future Projects
 
-### Motivation.
+### Motivation
 
-> Since Barnes and Noble, along with many other textbook retailers don't have API's, we needed to create web scraping tools to do this work for us.
+> Since Barnes & Noble along with many other textbook sellers don't have APIs, we needed to create web scraping tools to do this work for us.
 
 ### Tools Used
 - Python 3.6.4
@@ -14,22 +14,22 @@
 - Make sure to:
   1. `pip3 install requests`
   2. `pip3 install beautifulsoup4`
-- then run `python main.py -q query`
-
-_*note that queries should not contain spaces, just + signs_
+- then run `python main.py -q your_query`
 
 ## Documentation
-Currently, if you run `python main.py -q your_query`, it will return the average book price for the search results from Barnes and Noble on one page. The default query is `calculus+for+dummies`.
+Currently, if you run `python main.py -q your_query`, it will return the average book price for the search results that contain the title you requested from Barnes & Noble on one page.
+We are using the `websites.json` file as a list of currently supported websites. This can be easily appended and maintained, and may in future versions be accessible upon request of the client. 
 
-These results may be inaccurate, or, the program may just crash. It is still in the very early stages of dev.
+_*Note: These results may be inaccurate, or, the program may just crash. It is still in the very early stages of dev._
 
 ### Example Query:
-![image info](./screenshots/screenshot_demo_one.png)
+`python main.py -q Calculus for Dummies`
 
-### Future Methods:
+>_Avg. price for 'Calculus for Dummies' on Barnes & Noble: $ 19.99_
+
+### Future Plans:
 - Specify site
 - Specify Query
 - Specify function (what reseults it returns)
 - Specify data return format (JSON, etc.)
 - Anything you can dream of...
-
