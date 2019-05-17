@@ -1,4 +1,4 @@
-# Textboook Price Web Scraper
+# Textbook Price Web Scraper
 > A Web Scraping API for BarterOut Future Projects
 
 ### Motivation
@@ -11,10 +11,11 @@
 - Requests
 
 ### To Run the Project
-- Make sure to:
-  1. `pip3 install requests`
-  2. `pip3 install beautifulsoup4`
-- then run `python main.py -q your_query`
+Make sure to:
+1. `pip3 install requests`
+2. `pip3 install beautifulsoup4`
+
+then run `python main.py -q your_query`
 
 ## Documentation
 Currently, if you run `python main.py -q your_query`, it will return the average book price for the search results that contain the title you requested from Barnes & Noble on one page.
