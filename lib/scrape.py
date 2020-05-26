@@ -18,7 +18,7 @@ class BasicScraper:
 
     found = re.findall(r'\$\d+\.\d+', html_content)
     avg = 0
-    print(found)
+
     for price in found:
       price = price.replace('$', '')
       n_price = float(price)

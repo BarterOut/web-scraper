@@ -17,10 +17,10 @@ get_websites()
 
 @app.route('/api/query/', methods=['GET'])
 def get_price():
-    title = request.args.get('title')
-    scraper = BasicScraper(urls)
-    price = scraper.scrape(title)
-    return {'price': price}, 200
+  title = request.args.get('title')
+  scraper = BasicScraper(urls)
+  price = scraper.scrape(title)
+  return {'price': price}, 200
 
 def run():
-    app.run(debug=True, port=3000)
+  app.run(debug=True, host='0.0.0.0', port=3000)
