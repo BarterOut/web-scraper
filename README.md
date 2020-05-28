@@ -1,16 +1,16 @@
 # 📚 Textbook Price Web Scraper
-> A Web Scraping API for BarterOut Future Projects
+> A Web Scraping API for BarterOut
 
 ### 📊 Motivation
 
-> Since Barnes & Noble along with many other textbook sellers don't have APIs, we needed to create web scraping tools to do this work for us.
+We want to offer the average price of textbooks that you can find on our site. To do this, we decided to scrape
+Google and other sites (in the future) to compute the average price of a textbook, and wrap it in an API.
 
 ### 🔨 Tools Used
-- Python 3.6.4
+- Python 3
 - BeautifulSoup4
 - Requests
 - Flask
-- JSON
 
 ### 🔥 To Run the Project
 Make sure to have Docker and docker-compose installed.
@@ -24,17 +24,18 @@ you can send requests to.
 _*Note: These results may be inaccurate, or, the program may just crash. It is still in the very early stages of dev._
 
 ### Example Query:
+`GET localhost:3000/api/query/?title=Mind+on+Statistics`
+
+---
+Response:
 ```json
 {
   "price": "89.9513043478261"
 }
 ```
 
->_Avg. price for 'Mind on Statistics' on Google: $ 105.79_
-
 ### 🙌 Future Plans:
-- Specify site
-- Specify Query
-- Specify function (what reseults it returns)
-- Specify data return format (JSON, etc.)
+- Specify the query site to scrape from
+- Specify function (what results it returns)
+- Find best (lowest) price and provide URL
 - Anything you can dream of...
